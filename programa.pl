@@ -56,9 +56,9 @@ tieneDobleMaestria(Maestro):-
   esMaestroDe(Maestro, Elemento2),
   Elemento1 \= Elemento2.
   
-% Para saber si un maestro no maneja el agua, quiero ligar primero el elemento que sabe controlar y fijarme que no sea agua
-% noManejaAgua/1 -> Maestro
-noManejaAgua(Maestro):-
+% Para saber si un maestro maneja algo que no sea agua, quiero ligar primero el elemento que sabe controlar y fijarme que no coincida agua
+% manejaNoAgua/1 -> Maestro
+manejaNoAgua(Maestro):-
   esMaestroDe(Maestro, Elemento),
   Elemento \= agua.
  
